@@ -1,14 +1,12 @@
 import { Fragment, RefObject } from "react";
 
 interface ScreenshotPreviewInput {
-  showPreview: boolean;
   image: string;
   videoRef: RefObject<HTMLVideoElement>;
 }
 
 export const ScreenshotPreview = ({
   image,
-  showPreview,
   videoRef,
 }: ScreenshotPreviewInput) => (
   <Fragment>

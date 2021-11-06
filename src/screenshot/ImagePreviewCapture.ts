@@ -26,7 +26,7 @@ export const imageCapture = async ({ videoRef }: ImagePreviewCaptureInput) => {
 
     return frame;
   } catch (error) {
-    console.error("Error: " + error);
+    console.error("imageCapture error: " + error);
   }
 };
 
@@ -36,10 +36,11 @@ export const imagePreview = async ({ videoRef }: ImagePreviewCaptureInput) => {
     if (!videoElem) throw Error("Video HTML element not defined");
 
     videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia();
-
     dumpOptionsInfo(videoElem);
+
+    return videoElem.srcObject;
   } catch (error) {
-    console.error("Start preview error: " + error);
+    console.error("imagePreview error: " + error);
   }
 };
 
