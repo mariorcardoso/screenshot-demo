@@ -1,11 +1,11 @@
 import "./App.css";
-import { Screenshot } from "./screenshot/Screenshot";
+import { ScreenshotTool } from "./screenshot/ScreenshotTool";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Screenshot />
+        <ScreenshotTool />
       </header>
     </div>
   );
