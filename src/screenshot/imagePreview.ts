@@ -1,12 +1,12 @@
 import { RefObject } from "react";
 
-interface ImagePreviewCaptureInput {
+interface ImagePreviewInput {
   videoRef: RefObject<HTMLVideoElement>;
 }
 
 export const imagePreview = async ({
   videoRef,
-}: ImagePreviewCaptureInput): Promise<MediaStream | undefined> => {
+}: ImagePreviewInput): Promise<MediaStream | undefined> => {
   try {
     const videoElem = videoRef.current;
     if (!videoElem) throw Error("Video HTML element not defined");
